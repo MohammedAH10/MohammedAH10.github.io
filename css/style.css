@@ -81,14 +81,14 @@ nav {
 }
 
 .logo {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 800;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.9rem;
+    font-weight: 700;
     background: linear-gradient(135deg, var(--nebula-blue), var(--nebula-purple));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    letter-spacing: 3px;
+    letter-spacing: 0;
     text-decoration: none;
 }
 
@@ -384,7 +384,7 @@ footer span { color: var(--nebula-blue); }
     animation: fadeUp 0.8s 0.7s ease forwards;
 }
 
-/* Profile photo */
+/* Profile signature */
 .hero-photo-wrap {
     position: relative;
     width: 280px;
@@ -416,11 +416,29 @@ footer span { color: var(--nebula-blue); }
 .hero-photo {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     border-radius: 50%;
     position: relative;
     z-index: 1;
     border: 4px solid var(--space-black);
+}
+
+.text-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(3.8rem, 8vw, 6rem);
+    font-weight: 700;
+    letter-spacing: 0;
+    background:
+        radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.14), transparent 32%),
+        linear-gradient(135deg, rgba(79, 142, 247, 0.22), rgba(155, 93, 255, 0.18), rgba(255, 79, 163, 0.16)),
+        var(--space-black);
+    color: var(--text-bright);
+    text-shadow:
+        0 0 18px rgba(79, 142, 247, 0.45),
+        0 0 34px rgba(155, 93, 255, 0.35);
+    user-select: none;
 }
 
 .orbit-dot {
@@ -1282,7 +1300,7 @@ footer span { color: var(--nebula-blue); }
 
 @media (max-width: 480px) {
     nav { padding: 1rem 5%; }
-    .logo { font-size: 1.2rem; }
+    .logo { font-size: 1.55rem; }
     .hero { padding: 80px 4% 50px; }
     .hero-name { font-size: clamp(2.2rem, 10vw, 3rem); }
     .hero-roles { font-size: 0.75rem; letter-spacing: 0.5px; }
